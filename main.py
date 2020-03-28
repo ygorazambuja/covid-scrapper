@@ -110,17 +110,35 @@ def get_death_rate_by_age():
 
     ageDeathTable = soup.find_all('tbody')[0]
     rows = ageDeathTable.find_all('tr')
-    age = []
+    age = deleteFirstRow(rows)
+
+    age[0][0] = 'eightyMore'
+    age[1][0] = 'seventyToSeventyNine'
+    age[2][0] = 'sixtyToSixtyNine'
+    age[3][0] = 'fiftyToFiftyNine'
+    age[4][0] = 'fortyToFortyNine'
+    age[5][0] = 'thirtyToThirtyNine'
+    age[6][0] = 'twentyToTwentyNine'
+    age[7][0] = 'tenToNineteen'
+    age[8][0] = 'zeroToNine'
+
+    ageObj = []
+    for key in age:
+        ageObj.append({key[0]: {
+            'deathRateConfirmedCases': key[1],
+            'deathRateAllCases': key[2]
+        }})
+    return json.dumps(ageObj)
+
+
+def deleteFirstRow(rows):
+    temporary = []
     for row in rows:
         cols = row.find_all('td')
         cols = [x.text.strip() for x in cols]
-
-        age.append({cols[0]: {
-            'deathRateConfirmedCases': cols[1],
-            'deathRageAllCases': cols[2]
-        }})
-    del age[0]
-    return json.dumps(age)
+        temporary.append(cols)
+    del temporary[0]
+    return temporary
 
 
 @app.route('/sex')
