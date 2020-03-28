@@ -1,12 +1,13 @@
 import requests
+import os
+
 from bs4 import BeautifulSoup
 from flask import Flask
 
 app = Flask(__name__)
 
-
-@app.route('/covid')
-def covid(request):
+@app.route('/')
+def covid():
     response = requests.get('https://www.worldometers.info/coronavirus/').content
     soup = BeautifulSoup(response, 'html.parser')
 
@@ -41,6 +42,7 @@ def covid(request):
     return {'confirmedCases': confirmedCases, 'deathCases': deathCases, "recovereds": recovered,
             'closedCases': closedCases, 'countrys': countrys}
 
-#
-# if __name__ == '__main__':
-#     app.run(host='127.0.0.1', port='5000', debug=True)
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port='5000')
