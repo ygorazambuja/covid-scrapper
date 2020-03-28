@@ -1,6 +1,7 @@
 import os
 
 import requests
+import json
 from bs4 import BeautifulSoup
 from flask import Flask
 
@@ -9,14 +10,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def main_route():
-    response = requests.get('https://www.worldometers.info/coronavirus/').content
+    response = requests.get(
+        'https://www.worldometers.info/coronavirus/').content
     soup = BeautifulSoup(response, 'html.parser')
 
-    confirmedCases = soup.find_all('div', class_='maincounter-number')[0].text.strip(' ').strip('\n')
-    deathCases = soup.find_all('div', class_='maincounter-number')[1].text.strip(' ').strip('\n')
-    recovered = soup.find_all('div', class_='maincounter-number')[2].text.strip(' ').strip('\n')
+    confirmedCases = soup.find_all(
+        'div', class_='maincounter-number')[0].text.strip(' ').strip('\n')
+    deathCases = soup.find_all(
+        'div', class_='maincounter-number')[1].text.strip(' ').strip('\n')
+    recovered = soup.find_all(
+        'div', class_='maincounter-number')[2].text.strip(' ').strip('\n')
     closedCases = soup.find_all('div', class_='number-table-main')[1].text
-    lastUpdate = soup.find_all('div', style='font-size:13px; color:#999; text-align:center')[0].text
+    lastUpdate = soup.find_all(
+        'div', style='font-size:13px; color:#999; text-align:center')[0].text
     activeCases = soup.find_all(class_='number-table-main')[0].text
     activeCasesMildCondition = soup.find_all(class_='number-table')[0].text
     activeCasesSeriousCondition = soup.find_all(class_='number-table')[1].text
@@ -36,9 +42,11 @@ def main_route():
 def get_info_by_country(country):
     countryName = country
 
-    response = requests.get('https://www.worldometers.info/coronavirus/').content
+    response = requests.get(
+        'https://www.worldometers.info/coronavirus/').content
     soup = BeautifulSoup(response, 'html.parser')
-    lastUpdate = soup.find_all('div', style='font-size:13px; color:#999; text-align:center')[0].text
+    lastUpdate = soup.find_all(
+        'div', style='font-size:13px; color:#999; text-align:center')[0].text
 
     tbody = soup.find('tbody')
     rows = tbody.find_all('tr')
@@ -47,14 +55,14 @@ def get_info_by_country(country):
 
     if countryName in countries:
         return {'country': countries[countryName], 'lastUpdate': lastUpdate}
-        pass
     else:
         return {'error': 'Country does not exists, checkout for /countries'}
 
 
 @app.route('/countries')
 def get_countries_list():
-    response = requests.get('https://www.worldometers.info/coronavirus/').content
+    response = requests.get(
+        'https://www.worldometers.info/coronavirus/').content
     soup = BeautifulSoup(response, 'html.parser')
 
     countries = []
@@ -92,6 +100,27 @@ def fill_country_object(rows):
         }
         countries[country['name']] = country
     return countries
+
+
+@app.route('/age')
+def get_death_rate_by_age():
+    response = requests.get(
+        'https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/').content
+    soup = BeautifulSoup(response, 'html.parser')
+
+    ageDeathTable = soup.find_all('tbody')[0]
+    rows = ageDeathTable.find_all('tr')
+    age = []
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [x.text.strip() for x in cols]
+
+        age.append({cols[0]: {
+            'deathRateConfirmedCases': cols[1],
+            'deathRageAllCases': cols[2]
+        }})
+    del age[0]
+    return json.dumps(age)
 
 
 if __name__ == '__main__':
