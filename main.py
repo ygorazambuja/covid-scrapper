@@ -1,6 +1,6 @@
-import requests
 import os
 
+import requests
 from bs4 import BeautifulSoup
 from flask import Flask
 
@@ -21,28 +21,10 @@ def main_route():
     tbody = soup.find('tbody')
     rows = tbody.find_all('tr')
 
-    countrys = {}
-
-    for row in rows:
-        cols = row.find_all('td')
-        cols = [x.text.strip() for x in cols]
-
-        country = {
-            'name': cols[0],
-            'totalCases': cols[1],
-            'newCases': cols[2],
-            'totalDeaths': cols[3],
-            'newDeaths': cols[4],
-            'totalRecovered': cols[5],
-            'activeCases': cols[6],
-            'seriousCritical': cols[7],
-            'totalCasesByMillionPop': cols[8],
-            'totalDeathsByMillionPop': cols[9]
-        }
-        countrys[country['name']] = country
+    countries = fill_country_object(rows)
 
     return {'confirmedCases': confirmedCases, 'deathCases': deathCases, "recovereds": recovered,
-            'closedCases': closedCases, 'countrys': countrys, 'lastUpdate': lastUpdate}
+            'closedCases': closedCases, 'countries': countries, 'lastUpdate': lastUpdate}
 
 
 @app.route('/country/<country>')
@@ -53,29 +35,10 @@ def get_info_by_country(country):
     soup = BeautifulSoup(response, 'html.parser')
     lastUpdate = soup.find_all('div', style='font-size:13px; color:#999; text-align:center')[0].text
 
-
-    countries = {}
-
     tbody = soup.find('tbody')
     rows = tbody.find_all('tr')
 
-    for row in rows:
-        cols = row.find_all('td')
-        cols = [x.text.strip() for x in cols]
-
-        country = {
-            'name': cols[0],
-            'totalCases': cols[1],
-            'newCases': cols[2],
-            'totalDeaths': cols[3],
-            'newDeaths': cols[4],
-            'totalRecovered': cols[5],
-            'activeCases': cols[6],
-            'seriousCritical': cols[7],
-            'totalCasesByMillionPop': cols[8],
-            'totalDeathsByMillionPop': cols[9]
-        }
-        countries[country['name']] = country
+    countries = fill_country_object(rows)
 
     if countryName in countries:
         return {'country': countries[countryName], 'lastUpdate': lastUpdate}
@@ -102,6 +65,28 @@ def get_countries_list():
         countries.append(country)
 
     return {'countries ': countries}
+
+
+def fill_country_object(rows):
+    countries = {}
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [x.text.strip() for x in cols]
+
+        country = {
+            'name': cols[0],
+            'totalCases': cols[1],
+            'newCases': cols[2],
+            'totalDeaths': cols[3],
+            'newDeaths': cols[4],
+            'totalRecovered': cols[5],
+            'activeCases': cols[6],
+            'seriousCritical': cols[7],
+            'totalCasesByMillionPop': cols[8],
+            'totalDeathsByMillionPop': cols[9]
+        }
+        countries[country['name']] = country
+    return countries
 
 
 if __name__ == '__main__':
