@@ -16,6 +16,7 @@ def covid():
     recovered = soup.find_all('div', class_='maincounter-number')[2].text.strip(' ').strip('\n')
     closedCases = soup.find('div', class_='number-table-main').text
 
+
     tbody = soup.find('tbody')
     rows = tbody.find_all('tr')
 

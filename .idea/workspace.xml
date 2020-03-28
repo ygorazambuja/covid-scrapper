@@ -4,6 +4,7 @@
     <list default="true" id="e17fdb08-cc9e-4478-9f2e-d6f95d38397b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,7 @@
       <workItem from="1585347120642" duration="9837000" />
       <workItem from="1585357213283" duration="470000" />
       <workItem from="1585359235445" duration="5228000" />
-      <workItem from="1585365217349" duration="2899000" />
+      <workItem from="1585365217349" duration="3392000" />
     </task>
     <task id="LOCAL-00001" summary="fixing heroku enviroment">
       <created>1585365966800</created>
@@ -154,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585367947163</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="readme update">
+      <created>1585368137845</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585368137845</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,10 +198,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1197" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1585365116100" />
-    <state x="558" y="78" key="CommitChangelistDialog2" timestamp="1585367946662">
+    <state x="558" y="78" key="CommitChangelistDialog2" timestamp="1585368137456">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="558" y="78" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585367946662" />
+    <state x="558" y="78" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585368137456" />
     <state width="918" height="356" key="GridCell.Tab.0.bottom" timestamp="1585365203245">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -214,10 +222,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="468" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1585341527606" />
-    <state x="1032" y="257" key="Vcs.Push.Dialog.v2" timestamp="1585367950582">
+    <state x="1032" y="257" key="Vcs.Push.Dialog.v2" timestamp="1585368167599">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1032" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585367950582" />
+    <state x="1032" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585368167599" />
     <state x="651" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1585365222919">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
