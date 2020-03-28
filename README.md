@@ -27,12 +27,16 @@ The day is reset after midnight GMT+0
 
 # endpoints
 
+
+http://covid-web.herokuapp.com/ \
 **/** \
 brings all the info
 
+http://covid-web.herokuapp.com/countries \
 */countries* \
 brings the list of the countries available
 
+http://covid-web.herokuapp.com/country/Brazil \
 **/countries/_countryAvailable_** 
 ```json
 
@@ -55,7 +59,7 @@ brings the list of the countries available
 ```
 brings the info for the respective country 
 
-
+http://covid-web.herokuapp.com/comorbidities \
 **/comorbidities**
 ```json
 [
@@ -98,7 +102,7 @@ brings the info for the respective country
 ]
 ```
 
-
+http://covid-web.herokuapp.com/age \
 **/age**
 
 ```json
@@ -159,7 +163,7 @@ brings the info for the respective country
     }
 ]
 ```
-
+http://covid-web.herokuapp.com/sex \
 **/sex**
 
 ````json
