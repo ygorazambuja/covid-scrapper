@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e17fdb08-cc9e-4478-9f2e-d6f95d38397b" name="Default Changelist" comment="">
+    <list default="true" id="e17fdb08-cc9e-4478-9f2e-d6f95d38397b" name="Default Changelist" comment="readme update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -150,7 +150,7 @@
       <workItem from="1585359235445" duration="5228000" />
       <workItem from="1585365217349" duration="4979000" />
       <workItem from="1585371122372" duration="254000" />
-      <workItem from="1585373837236" duration="1391000" />
+      <workItem from="1585373837236" duration="2182000" />
     </task>
     <task id="LOCAL-00001" summary="fixing heroku enviroment">
       <created>1585365966800</created>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585368627838</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="readme update, inserting new routes.">
+      <created>1585375312310</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585375312310</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +224,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixing heroku enviroment" />
     <MESSAGE value="readme update" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme update" />
+    <MESSAGE value="readme update, inserting new routes." />
+    <option name="LAST_COMMIT_MESSAGE" value="readme update, inserting new routes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="476" y="153" width="1181" height="684" key="#Plugins" timestamp="1585341443986">
@@ -232,34 +240,34 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1197" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1585365116100" />
-    <state x="558" y="78" key="CommitChangelistDialog2" timestamp="1585368627456">
+    <state x="558" y="78" key="CommitChangelistDialog2" timestamp="1585376019234">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="558" y="78" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585368627456" />
-    <state width="1879" height="353" key="GridCell.Tab.0.bottom" timestamp="1585374993193">
+    <state x="558" y="78" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585376019234" />
+    <state width="1879" height="353" key="GridCell.Tab.0.bottom" timestamp="1585375813928">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1879" height="353" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1585374993193" />
-    <state width="1879" height="353" key="GridCell.Tab.0.center" timestamp="1585374993193">
+    <state width="1879" height="353" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1585375813928" />
+    <state width="1879" height="353" key="GridCell.Tab.0.center" timestamp="1585375813928">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1879" height="353" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1585374993193" />
-    <state width="1879" height="353" key="GridCell.Tab.0.left" timestamp="1585374993193">
+    <state width="1879" height="353" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1585375813928" />
+    <state width="1879" height="353" key="GridCell.Tab.0.left" timestamp="1585375813928">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1879" height="353" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1585374993193" />
-    <state width="1879" height="353" key="GridCell.Tab.0.right" timestamp="1585374993193">
+    <state width="1879" height="353" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1585375813928" />
+    <state width="1879" height="353" key="GridCell.Tab.0.right" timestamp="1585375813928">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1879" height="353" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1585374993193" />
+    <state width="1879" height="353" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1585375813928" />
     <state x="468" y="167" key="SettingsEditor" timestamp="1585341527606">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="468" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1585341527606" />
-    <state x="1032" y="257" key="Vcs.Push.Dialog.v2" timestamp="1585368633311">
+    <state x="1032" y="257" key="Vcs.Push.Dialog.v2" timestamp="1585375314725">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1032" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585368633311" />
+    <state x="1032" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585375314725" />
     <state x="651" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1585373837220">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -278,7 +286,7 @@
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1585354993830" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/covid_scrapper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1585374993187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/covid_scrapper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1585375813923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/covid_scrapper$__init__.coverage" NAME="main Coverage Results" MODIFIED="1585364782888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/covid_scrapper$testfile.coverage" NAME="testfile Coverage Results" MODIFIED="1585354093918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
