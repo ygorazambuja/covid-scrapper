@@ -25,4 +25,16 @@ The day is reset after midnight GMT+0
 
 ````
 
+#endpoints
+
+**/**
+brings all the info
+
+**/countries* \
+brings the list of the countries available
+
+**/countries/_countryAvailable_** \
+brings the info for the respective country 
+
+
 as I add new features I will go up
