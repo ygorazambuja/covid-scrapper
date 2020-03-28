@@ -1,0 +1,5 @@
+requests
+Flask==1.1.1
+google-cloud-storage==1.26.0
+beautifulsoup4==4.8.2
+
