@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e17fdb08-cc9e-4478-9f2e-d6f95d38397b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +124,7 @@
       <workItem from="1585347120642" duration="9837000" />
       <workItem from="1585357213283" duration="470000" />
       <workItem from="1585359235445" duration="5228000" />
-      <workItem from="1585365217349" duration="1641000" />
+      <workItem from="1585365217349" duration="2899000" />
     </task>
     <task id="LOCAL-00001" summary="fixing heroku enviroment">
       <created>1585365966800</created>
@@ -134,7 +133,28 @@
       <option name="project" value="LOCAL" />
       <updated>1585365966800</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixing heroku enviroment">
+      <created>1585366873330</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585366873330</updated>
+    </task>
+    <task id="LOCAL-00003" summary="readme update">
+      <created>1585367929633</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585367929633</updated>
+    </task>
+    <task id="LOCAL-00004" summary="readme update">
+      <created>1585367947163</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585367947163</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +174,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixing heroku enviroment" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing heroku enviroment" />
+    <MESSAGE value="readme update" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="476" y="153" width="1181" height="684" key="#Plugins" timestamp="1585341443986">
@@ -169,10 +190,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1197" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1585365116100" />
-    <state x="1061" y="116" key="CommitChangelistDialog2" timestamp="1585365966397">
+    <state x="558" y="78" key="CommitChangelistDialog2" timestamp="1585367946662">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1061" y="116" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585365966397" />
+    <state x="558" y="78" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585367946662" />
     <state width="918" height="356" key="GridCell.Tab.0.bottom" timestamp="1585365203245">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -193,10 +214,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="468" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1585341527606" />
-    <state x="1032" y="257" key="Vcs.Push.Dialog.v2" timestamp="1585366004495">
+    <state x="1032" y="257" key="Vcs.Push.Dialog.v2" timestamp="1585367950582">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1032" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585366004495" />
+    <state x="1032" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585367950582" />
     <state x="651" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1585365222919">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
