@@ -1,4 +1,4 @@
 *pyc
-venv
-.idea
+/venv
+/.idea/
 test_scrapper.py

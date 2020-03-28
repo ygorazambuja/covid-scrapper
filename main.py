@@ -1,7 +1,7 @@
+import json
 import os
 
 import requests
-import json
 from bs4 import BeautifulSoup
 from flask import Flask
 
@@ -121,6 +121,57 @@ def get_death_rate_by_age():
         }})
     del age[0]
     return json.dumps(age)
+
+
+@app.route('/sex')
+def get_death_rate_by_sex():
+    response = requests.get(
+        'https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/').content
+    soup = BeautifulSoup(response, 'html.parser')
+
+    sexRatioTable = soup.find_all('tbody')[1]
+    rows = sexRatioTable.find_all('tr')
+
+    sex = []
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [x.text.strip() for x in cols]
+
+        sex.append({cols[0]: {
+            'deathRateConfirmedCases': cols[1],
+            'deathRateAllCases': cols[2]
+        }})
+
+    del sex[0]
+    return json.dumps(sex)
+
+
+@app.route('/comorbidities')
+def get_death_rate_by_comorbidities():
+    response = requests.get(
+        'https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/').content
+    soup = BeautifulSoup(response, 'html.parser')
+
+    comorbiditiesTable = soup.find_all('tbody')[2]
+
+    rows = comorbiditiesTable.find_all('tr')
+
+    comorbidities = []
+
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [x.text.strip() for x in cols]
+
+        comorbidities.append({
+            cols[0]: {
+                'deathRateConfirmedCases': cols[1],
+                'deathRateAllCases': cols[2]
+            }
+        })
+    del comorbidities[0]
+
+    return json.dumps(comorbidities)
 
 
 if __name__ == '__main__':

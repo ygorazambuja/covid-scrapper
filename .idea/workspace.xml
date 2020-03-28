@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e17fdb08-cc9e-4478-9f2e-d6f95d38397b" name="Default Changelist" comment="add &quot;activeCases, activeCasesMildCondition, activeSeriousCondition&quot;,">
+    <list default="true" id="e17fdb08-cc9e-4478-9f2e-d6f95d38397b" name="Default Changelist" comment="add &quot;/age , /sex, /comorbidities&quot; routes.">
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +36,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Zj2YghDhUhAu70jM07tGIIowHA" />
@@ -58,7 +66,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.test_scrapper">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="covid-scrapper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,8 +157,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.test_scrapper" />
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.testfile" />
       </list>
@@ -176,7 +184,8 @@
       <workItem from="1585373837236" duration="2220000" />
       <workItem from="1585406176478" duration="1132000" />
       <workItem from="1585412558375" duration="728000" />
-      <workItem from="1585415757287" duration="560000" />
+      <workItem from="1585415757287" duration="3452000" />
+      <workItem from="1585424993311" duration="112000" />
     </task>
     <task id="LOCAL-00001" summary="fixing heroku enviroment">
       <created>1585365966800</created>
@@ -248,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585412753552</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add &quot;activeCases, activeCasesMildCondition, activeCasesSeriousCondition&quot; params in /">
+      <created>1585416342460</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585416342460</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +295,9 @@
     <MESSAGE value="readme update" />
     <MESSAGE value="infos update" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="add &quot;activeCases, activeCasesMildCondition, activeCasesSeriousCondition&quot; params in /" />
+    <MESSAGE value="add &quot;/age , /sex, /comorbidities&quot; routes." />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;/age , /sex, /comorbidities&quot; routes." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -297,38 +315,38 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1197" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1585365116100" />
-    <state x="558" y="78" key="CommitChangelistDialog2" timestamp="1585416300233">
+    <state x="558" y="78" key="CommitChangelistDialog2" timestamp="1585425092696">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="558" y="78" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585416300233" />
-    <state width="1879" height="352" key="GridCell.Tab.0.bottom" timestamp="1585416089983">
+    <state x="558" y="78" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1585425092696" />
+    <state width="916" height="291" key="GridCell.Tab.0.bottom" timestamp="1585419210783">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1879" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1585416089983" />
-    <state width="1879" height="352" key="GridCell.Tab.0.center" timestamp="1585416089983">
+    <state width="916" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1585419210783" />
+    <state width="916" height="291" key="GridCell.Tab.0.center" timestamp="1585419210783">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1879" height="352" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1585416089983" />
-    <state width="1879" height="352" key="GridCell.Tab.0.left" timestamp="1585416089983">
+    <state width="916" height="291" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1585419210783" />
+    <state width="916" height="291" key="GridCell.Tab.0.left" timestamp="1585419210783">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1879" height="352" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1585416089983" />
-    <state width="1879" height="352" key="GridCell.Tab.0.right" timestamp="1585416089983">
+    <state width="916" height="291" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1585419210783" />
+    <state width="916" height="291" key="GridCell.Tab.0.right" timestamp="1585419210783">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1879" height="352" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1585416089983" />
+    <state width="916" height="291" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1585419210783" />
     <state x="468" y="167" key="SettingsEditor" timestamp="1585341527606">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="468" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1585341527606" />
-    <state x="1032" y="257" key="Vcs.Push.Dialog.v2" timestamp="1585412756315">
+    <state x="1032" y="257" key="Vcs.Push.Dialog.v2" timestamp="1585416347248">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1032" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585412756315" />
-    <state x="651" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1585415758190">
+    <state x="1032" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1585416347248" />
+    <state x="651" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1585424993449">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="651" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585415758190" />
+    <state x="651" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585424993449" />
     <state x="647" y="138" width="626" height="774" key="find.popup" timestamp="1585353993350">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -343,7 +361,7 @@
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1585354993830" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/covid_scrapper$test_scrapper.coverage" NAME="test_scrapper Coverage Results" MODIFIED="1585415933346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/covid_scrapper$test_scrapper.coverage" NAME="test_scrapper Coverage Results" MODIFIED="1585418745558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/covid_scrapper$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1585416089976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/covid_scrapper$__init__.coverage" NAME="main Coverage Results" MODIFIED="1585364782888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/covid_scrapper$testfile.coverage" NAME="testfile Coverage Results" MODIFIED="1585354093918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

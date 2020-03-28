@@ -12,7 +12,7 @@ The day is reset after midnight GMT+0
 
 
 * Json Response &downarrow;
-````jsonp
+```jsonp
 { 
   "closedCases": "436,539",
   "confirmedCases": "597,267 ",
@@ -23,8 +23,7 @@ The day is reset after midnight GMT+0
   "recovereds": "133,363",
   "lastUpdate": "last updated info"
 }
-
-````
+```
 
 #endpoints
 
@@ -34,7 +33,7 @@ brings all the info
 **/countries* \
 brings the list of the countries available
 
-**/countries/_countryAvailable_** \
+**/countries/_countryAvailable_** 
 ```json
 
 {
@@ -55,6 +54,132 @@ brings the list of the countries available
 
 ```
 brings the info for the respective country 
+
+
+**/comorbidities**
+```json
+[
+    {
+        "Cardiovascular disease": {
+            "deathRateConfirmedCases": "13.2%",
+            "deathRateAllCases": "10.5%"
+        }
+    },
+    {
+        "Diabetes": {
+            "deathRateConfirmedCases": "9.2%",
+            "deathRateAllCases": "7.3%"
+        }
+    },
+    {
+        "Chronic respiratory disease": {
+            "deathRateConfirmedCases": "8.0%",
+            "deathRateAllCases": "6.3%"
+        }
+    },
+    {
+        "Hypertension": {
+            "deathRateConfirmedCases": "8.4%",
+            "deathRateAllCases": "6.0%"
+        }
+    },
+    {
+        "Cancer": {
+            "deathRateConfirmedCases": "7.6%",
+            "deathRateAllCases": "5.6%"
+        }
+    },
+    {
+        "no pre-existing conditions": {
+            "deathRateConfirmedCases": "",
+            "deathRateAllCases": "0.9%"
+        }
+    }
+]
+```
+
+
+**/age**
+
+```json
+[
+    {
+        "80+ years old": {
+            "deathRateConfirmedCases": "21.9%",
+            "deathRageAllCases": "14.8%"
+        }
+    },
+    {
+        "70-79 years old": {
+            "deathRateConfirmedCases": "",
+            "deathRageAllCases": "8.0%"
+        }
+    },
+    {
+        "60-69 years old": {
+            "deathRateConfirmedCases": "",
+            "deathRageAllCases": "3.6%"
+        }
+    },
+    {
+        "50-59 years old": {
+            "deathRateConfirmedCases": "",
+            "deathRageAllCases": "1.3%"
+        }
+    },
+    {
+        "40-49 years old": {
+            "deathRateConfirmedCases": "",
+            "deathRageAllCases": "0.4%"
+        }
+    },
+    {
+        "30-39 years old": {
+            "deathRateConfirmedCases": "",
+            "deathRageAllCases": "0.2%"
+        }
+    },
+    {
+        "20-29 years old": {
+            "deathRateConfirmedCases": "",
+            "deathRageAllCases": "0.2%"
+        }
+    },
+    {
+        "10-19 years old": {
+            "deathRateConfirmedCases": "",
+            "deathRageAllCases": "0.2%"
+        }
+    },
+    {
+        "0-9 years old": {
+            "deathRateConfirmedCases": "",
+            "deathRageAllCases": "no fatalities"
+        }
+    }
+]
+```
+
+**/sex**
+
+````json
+[
+    {
+        "Male": {
+            "deathRateConfirmedCases": "4.7%",
+            "deathRateAllCases": "2.8%"
+        }
+    },
+    {
+        "Female": {
+            "deathRateConfirmedCases": "2.8%",
+            "deathRateAllCases": "1.7%"
+        }
+    }
+]
+
+````
+
 
 
 as I add new features I will go up
