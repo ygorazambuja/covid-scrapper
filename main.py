@@ -16,6 +16,7 @@ def main_route():
     deathCases = soup.find_all('div', class_='maincounter-number')[1].text.strip(' ').strip('\n')
     recovered = soup.find_all('div', class_='maincounter-number')[2].text.strip(' ').strip('\n')
     closedCases = soup.find('div', class_='number-table-main').text
+    lastUpdate = soup.find_all('div', style='font-size:13px; color:#999; text-align:center')[0].text
 
     tbody = soup.find('tbody')
     rows = tbody.find_all('tr')
@@ -41,7 +42,7 @@ def main_route():
         countrys[country['name']] = country
 
     return {'confirmedCases': confirmedCases, 'deathCases': deathCases, "recovereds": recovered,
-            'closedCases': closedCases, 'countrys': countrys}
+            'closedCases': closedCases, 'countrys': countrys, 'lastUpdate': lastUpdate}
 
 
 @app.route('/country/<country>')
@@ -50,6 +51,8 @@ def get_info_by_country(country):
 
     response = requests.get('https://www.worldometers.info/coronavirus/').content
     soup = BeautifulSoup(response, 'html.parser')
+    lastUpdate = soup.find_all('div', style='font-size:13px; color:#999; text-align:center')[0].text
+
 
     countries = {}
 
@@ -75,7 +78,7 @@ def get_info_by_country(country):
         countries[country['name']] = country
 
     if countryName in countries:
-        return countries[countryName]
+        return {'country': countries[countryName], 'lastUpdate': lastUpdate}
         pass
     else:
         return {'error': 'Country does not exists, checkout for /countries'}
