@@ -185,13 +185,12 @@ http://covid-web.herokuapp.com/sex \
 http://covid-web.herokuapp.com/yesterday \
 **/yesterday**
 
-```jsonp
+```json
 {
     {
     "total": {
         "activeCases": "490,746",
         "countries": {
-          //countries infos
         },
         "newDeaths": "+3,516",
         "seriousCritical": "25,351",
