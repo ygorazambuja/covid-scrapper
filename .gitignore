@@ -2,3 +2,4 @@
 /venv
 /.idea/
 test_scrapper.py
+.vscode

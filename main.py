@@ -7,6 +7,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
+# TODO Latest News
+# TODO Yesterday Table
+
 
 @app.route('/')
 def main_route():
@@ -76,8 +79,45 @@ def get_countries_list():
 
         country = cols[0]
         countries.append(country)
-
     return {'countries ': countries}
+
+
+@app.route('/yesterday')
+def get_yesterday_data():
+
+    response = requests.get(
+        'https://www.worldometers.info/coronavirus/').content
+    soup = BeautifulSoup(response, 'html.parser')
+    tbody = soup.find(id='main_table_countries_yesterday').find('tbody')
+    rows = tbody.find_all('tr')
+    countries = fill_country_object(rows)
+    totalRow = soup.find_all(class_='total_row')[1]
+    tds = totalRow.find_all('td')
+
+    totalCases = tds[1].text
+    newCases = tds[2].text
+    totalDeaths = tds[3].text
+    newDeaths = tds[4].text
+    totalRecovered = tds[5].text
+    activeCases = tds[6].text
+    seriousCritical = tds[7].text
+    totalCasesByMillionPop = tds[8].text
+    totalDeathsByMillionPop = tds[9].text
+    firstCase = tds[10].text
+
+    yesterdayData = {
+        'total': {
+            'totalCases': totalCases,
+            'totalDeaths': totalDeaths,
+            'newDeaths': newDeaths,
+            'totalRecovered': totalRecovered,
+            'activeCases': activeCases,
+            'seriousCritical': seriousCritical,
+            'totalCasesByMillionPop': totalCasesByMillionPop,
+            'totalDeathsByMillionPop':  totalDeathsByMillionPop, 'countries': countries
+        }
+    }
+    return yesterdayData
 
 
 def fill_country_object(rows):
@@ -96,7 +136,8 @@ def fill_country_object(rows):
             'activeCases': cols[6],
             'seriousCritical': cols[7],
             'totalCasesByMillionPop': cols[8],
-            'totalDeathsByMillionPop': cols[9]
+            'totalDeathsByMillionPop': cols[9],
+            'firstCase': cols[10]
         }
         countries[country['name']] = country
     return countries
@@ -151,7 +192,6 @@ def get_death_rate_by_sex():
     rows = sexRatioTable.find_all('tr')
 
     sex = []
-
     for row in rows:
         cols = row.find_all('td')
         cols = [x.text.strip() for x in cols]
@@ -160,7 +200,6 @@ def get_death_rate_by_sex():
             'deathRateConfirmedCases': cols[1],
             'deathRateAllCases': cols[2]
         }})
-
     del sex[0]
     return json.dumps(sex)
 
@@ -170,11 +209,8 @@ def get_death_rate_by_comorbidities():
     response = requests.get(
         'https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/').content
     soup = BeautifulSoup(response, 'html.parser')
-
     comorbiditiesTable = soup.find_all('tbody')[2]
-
     rows = comorbiditiesTable.find_all('tr')
-
     comorbidities = []
 
     for row in rows:
@@ -188,7 +224,6 @@ def get_death_rate_by_comorbidities():
             }
         })
     del comorbidities[0]
-
     return json.dumps(comorbidities)
 
 
