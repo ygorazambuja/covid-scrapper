@@ -182,4 +182,26 @@ http://covid-web.herokuapp.com/sex \
 ]
 ```
 
+http://covid-web.herokuapp.com/yesterday \
+**/yesterday**
+
+```json
+{
+    {
+    "total": {
+        "activeCases": "490,746",
+        "countries": {
+          //countries infos
+        },
+        "newDeaths": "+3,516",
+        "seriousCritical": "25,351",
+        "totalCases": "663,079",
+        "totalCasesByMillionPop": "85.1",
+        "totalDeaths": "30,857",
+        "totalDeathsByMillionPop": "4.0",
+        "totalRecovered": "141,476"
+    }
+}
+```
+
 as I add new features I will go up
