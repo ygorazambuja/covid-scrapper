@@ -187,7 +187,6 @@ http://covid-web.herokuapp.com/yesterday \
 
 ```json
 {
-    {
     "total": {
         "activeCases": "490,746",
         "countries": {
@@ -202,5 +201,31 @@ http://covid-web.herokuapp.com/yesterday \
     }
 }
 ```
+
+http://covid-web.herokuapp.com/news \
+**/news**
+````json
+{
+    "0": {
+        "info": " 6796 new cases and 820 new deaths in Spain. Total cases surpass 80,000  ",
+        "source": [
+            "https://www.rtve.es/noticias/20200329/mapa-del-coronavirus-espana/2004681.shtml",
+            "https://covid19.isciii.es/"
+        ]
+    },
+    "1": {
+        "info": "77 new cases and 1 new death in Morocco ",
+        "source": [
+            "http://www.covidmaroc.ma/Pages/AccueilAR.aspx"
+        ]
+    },
+    "2": {
+        "info": " 64 new cases and 1 new death in Côte d'Ivoire. 1st death in the country ",
+        "source": [
+            "https://twitter.com/LifeMagazine_CI/status/1244360628279672834"
+        ]
+    }
+}
+````
 
 as I add new features I will go up

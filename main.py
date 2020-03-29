@@ -110,11 +110,13 @@ def get_yesterday_data():
             'totalCases': totalCases,
             'totalDeaths': totalDeaths,
             'newDeaths': newDeaths,
+            'newCases': newCases,
             'totalRecovered': totalRecovered,
             'activeCases': activeCases,
             'seriousCritical': seriousCritical,
             'totalCasesByMillionPop': totalCasesByMillionPop,
-            'totalDeathsByMillionPop':  totalDeathsByMillionPop, 'countries': countries
+            'totalDeathsByMillionPop':  totalDeathsByMillionPop, 'countries': countries,
+            'firstCase': firstCase
         }
     }
     return yesterdayData
@@ -225,6 +227,29 @@ def get_death_rate_by_comorbidities():
         })
     del comorbidities[0]
     return json.dumps(comorbidities)
+
+
+@app.route('/news')
+def get_news():
+    response = requests.get(
+        'https://www.worldometers.info/coronavirus/').content
+    soup = BeautifulSoup(response, 'html.parser')
+
+    newsLi = soup.find_all(class_='news_post')
+    infos = {}
+    count = 0
+
+    for line in newsLi:
+        source = []
+        hrefs = line.find_all('a')
+        for href in hrefs:
+            if not '/coronavirus/country' in href.get('href'):
+                source.append(href.get('href'))
+        infos.update({count: {'info': line.text.strip(
+            ' ').strip('\n').replace('\u00a0', ' ').replace('[source]', ''),
+            'source': source}})
+        count += 1
+    return infos
 
 
 if __name__ == '__main__':
