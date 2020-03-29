@@ -185,7 +185,7 @@ http://covid-web.herokuapp.com/sex \
 http://covid-web.herokuapp.com/yesterday \
 **/yesterday**
 
-```json
+```jsonp
 {
     {
     "total": {
