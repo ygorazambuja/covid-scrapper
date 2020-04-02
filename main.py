@@ -5,10 +5,8 @@ import requests
 from bs4 import BeautifulSoup
 from flask import Flask
 
-app = Flask(__name__)
 
-# TODO Latest News
-# TODO Yesterday Table
+app = Flask(__name__)
 
 
 @app.route('/')
@@ -103,7 +101,6 @@ def get_yesterday_data():
     seriousCritical = tds[7].text
     totalCasesByMillionPop = tds[8].text
     totalDeathsByMillionPop = tds[9].text
-    firstCase = tds[10].text
 
     yesterdayData = {
         'total': {
@@ -116,7 +113,6 @@ def get_yesterday_data():
             'seriousCritical': seriousCritical,
             'totalCasesByMillionPop': totalCasesByMillionPop,
             'totalDeathsByMillionPop':  totalDeathsByMillionPop, 'countries': countries,
-            'firstCase': firstCase
         }
     }
     return yesterdayData
@@ -139,7 +135,6 @@ def fill_country_object(rows):
             'seriousCritical': cols[7],
             'totalCasesByMillionPop': cols[8],
             'totalDeathsByMillionPop': cols[9],
-            'firstCase': cols[10]
         }
         countries[country['name']] = country
     return countries
