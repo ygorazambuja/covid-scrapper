@@ -1,5 +1,7 @@
 *pyc
-/venv
-/.idea/
+venv
+.idea
 test_scrapper.py
 .vscode
+*__pycache__
+Pipfile
