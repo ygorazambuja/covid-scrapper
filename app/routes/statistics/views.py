@@ -99,6 +99,6 @@ def get_news():
                 source.append(href.get('href'))
         infos.update({count: {'info': line.text.strip(
             ' ').strip('\n').replace('\u00a0', ' ').replace('[source]', ''),
-                              'source': source}})
+            'source': source}})
         count += 1
     return infos
