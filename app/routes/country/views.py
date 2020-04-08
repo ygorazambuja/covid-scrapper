@@ -13,7 +13,7 @@ def get_info_by_country(country):
         'https://www.worldometers.info/coronavirus/').content
     soup = BeautifulSoup(response, 'html.parser')
     lastUpdate = soup.find_all(
-        'div', style='font-size:13px; color:#999; text-align:center')[0].text
+        'div', style='font-size:13px; color:#999; margin-top:5px; text-align:center')[0].text
 
     tbody = soup.find('tbody')
     rows = tbody.find_all('tr')
