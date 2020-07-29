@@ -5,16 +5,16 @@ def fill_country_object(rows):
         cols = [x.text.strip() for x in cols]
 
         country = {
-            'name': cols[0],
-            'totalCases': cols[1],
-            'newCases': cols[2],
-            'totalDeaths': cols[3],
-            'newDeaths': cols[4],
-            'totalRecovered': cols[5],
-            'activeCases': cols[6],
-            'seriousCritical': cols[7],
-            'totalCasesByMillionPop': cols[8],
-            'totalDeathsByMillionPop': cols[9],
+            'name': cols[1],
+            'totalCases': cols[2],
+            'newCases': cols[3],
+            'totalDeaths': cols[4],
+            'newDeaths': cols[5],
+            'totalRecovered': cols[6],
+            'activeCases': cols[7],
+            'seriousCritical': cols[8],
+            'totalCasesByMillionPop': cols[9],
+            'totalDeathsByMillionPop': cols[10],
         }
         countries[country['name']] = country
     return countries
