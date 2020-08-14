@@ -13,7 +13,7 @@ def get_death_rate_by_age():
         'https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/').content
     soup = BeautifulSoup(response, 'html.parser')
 
-    ageDeathTable = soup.find_all('tbody')[0]
+    ageDeathTable = soup.find_all('tbody')[3]
     rows = ageDeathTable.find_all('tr')
     age = delete_first_row(rows)
 
@@ -42,7 +42,7 @@ def get_death_rate_by_sex():
         'https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/').content
     soup = BeautifulSoup(response, 'html.parser')
 
-    sexRatioTable = soup.find_all('tbody')[1]
+    sexRatioTable = soup.find_all('tbody')[4]
     rows = sexRatioTable.find_all('tr')
 
     sex = []
@@ -63,7 +63,7 @@ def get_death_rate_by_comorbidities():
     response = requests.get(
         'https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/').content
     soup = BeautifulSoup(response, 'html.parser')
-    comorbiditiesTable = soup.find_all('tbody')[2]
+    comorbiditiesTable = soup.find_all('tbody')[5]
     rows = comorbiditiesTable.find_all('tr')
     comorbidities = []
 
